@@ -1,0 +1,15 @@
+Question specification:
+input format -> first line: #vertices, #edges
+                subsequent lines: pairs of numbers, outlining directed edges
+output format -> in each line, a pair of numbers indicating a directed edge between two vertices
+                and a label for each edge:
+                tree edge: an edge (u, v) is a tree edge if it is the edge you are traversing
+                            when visiting v for the first time in the algorithm
+                forward edge: an edge (u, v) is a forward edge if v is a descendant of u
+                            in the DFS forest, but (u, v) is not a tree edge
+                back edge: an edge (u, v) is a back edge if v is an ancestor of u
+                            in the DFS forest
+                cross edge: an edge (u, v) is a cross edge in all other cases, i.e.
+                            if there is no path of tree edges u -> v nor v -> u
+
+I chose to implement an algorithmic solution to this problem using recursion, in Python.

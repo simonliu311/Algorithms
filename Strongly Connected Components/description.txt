@@ -1,0 +1,3 @@
+The problem statement is as follows. We are given a graph of determined size with edges defined by tuples of numbers. We want to find out how many components exist, which are our 'clusters of villages', connected by roads (edges), and therefore the number of edges we would need to add to create a spanning tree/cycle of the graph.
+
+This problem is, fundamentally, a problem on identifying strongly-connected components. My algorithm compares incoming edges to existing nodes, and uses a simple clustering algorithm to mark new nodes as accounted for if they are connected to any nodes within existing components. Finally, the number of components - 1 is returned.

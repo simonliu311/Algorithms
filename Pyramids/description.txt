@@ -1,0 +1,13 @@
+Problem Description
+
+This outlines one of 'building pyramids': a pyramid of height h is defined as follows:
+1. There is a vertical stack of h squares at the center. Assume this stack is at horizontal position k.
+2. Immediately left and right of the center, at positions k-1 and k+1, there are vertical stacks h-1 squares high.
+3. This structure repeats itself until positions k-h and k+h
+
+Input format -> line 1: a number, n, the number of stacks of squares
+		line 2: n numbers, denoting the available height of each stack
+
+Output format: two integers h and i: h being the maximum possible height of a pyramid, and i being the index where the midpoint of the pyramid lies. 
+
+I approached this problem using dynamic programming, updating a DP array based on the heights around each block, and using two pointers to consider from both sides, which is necessary for confirming a pyramid can be symmetrically built.

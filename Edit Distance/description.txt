@@ -1,0 +1,6 @@
+Problem Description: computing edit distance, which is defined as the smallest number of single-letter insertions, deletions, or substitutions needed to change one word to another. 
+
+Input format -> a character stream of two words, on two separate lines
+Output format -> the edit distance, and relative positioning of the two words, with spaces inserted to show an optimal alignment of the two words. 
+
+My algorithm uses a dynamic programming approach. First, I use a 2-dimensional DP array, and iterate through the characters of each input string to calculate the mismatch at each stage. Then, a backtracking algorithm iterates through the DP array, from the last element, and generates strings with white space inserted depending on the relative relations on elements while backtracking through the DP array. These answers are generated in reverse, so they are reversed, and outputted as the solution.
